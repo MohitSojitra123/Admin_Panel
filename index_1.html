@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Tailwind CSS Linlk -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS Linlk -->
+
+    <!-- Remix Icon CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Remix Icon CDN -->
+
+</head>
+<body>
+
+    <div class="Container w-100 h-[100vh] flex">
+        <div class="sidebar z-10 fixed left-0 w-auto px-[20px] h-[100vh] flex flex-col items-center pb-[100px] justify-between pt-[15px] text-[20px] bg-[#202020] text-white border-r border-r-[#373737]">
+            <img src="./Assets/logo-icon.svg" class="w-[30px]">
+            <i class="ri-timer-2-line text-[#6A69F5]"></i>
+            <i class="ri-apps-2-line"></i>
+            <i class="ri-box-3-line"></i>
+            <i class="ri-flashlight-line"></i>
+            <i class="ri-pie-chart-line"></i>
+            <i class="ri-at-fill"></i>
+            <i class="ri-drag-move-line"></i>
+            <i class="ri-file-chart-line"></i>
+            <i class="ri-table-line"></i>
+            <i class="ri-user-line"></i>
+            <i class="ri-pages-line"></i>
+            <i class="ri-layout-3-line"></i>
+            <i class="ri-git-repository-private-line"></i>
+            <i class="ri-list-check"></i>
+            <i class="ri-article-line"></i>
+        </div>
+        <div class="Container-2 w-[97%] relative right-0 h-full ms-[70px]">
+            <div class="navbar sticky w-[100%] top-0 right-0 h-auto py-[5px] px-[10px] border-b border-b-[#373737] text-white flex justify-between bg-[#202020]">
+                <div class="navleft flex w-auto justify-between items-center gap-[1vw]">
+                    <i class="ri-menu-2-line text-[24px]"></i>
+                    <div class="searchbarAtNav hidden w-[330px] h-[40px] border border-[#373737] rounded-[3px] bg-[#151515] md:flex items-center justify-between px-[1vw]">
+                        <input class="outline-none  bg-transparent w-[300px] placeholder:text-[#706e6e] placeholder:text-[13px] text-[#cfcece] text-[15px]" type="text" placeholder="Search..." >
+                        <i class="ri-search-line text-[#cfcece]"></i>
+                    </div>
+                </div>
+                <div class="navright w-auto flex items-center text-[20px] gap-3">
+                    <i class="ri-fullscreen-line"></i>
+                    <i class="ri-sun-line"></i>
+                    <i class="ri-notification-3-line"></i>
+                    <div class="navUserProfile flex items-center gap-3">
+                        <img src="./Assets/user.png" class="w-[30px] h-[30px] rounded-[50%]">
+                        <p class="text-[#cfcece] text-[15px] flex items-center">Stevens L. <i class="ri-arrow-drop-down-line text-[35px] text-[#cfcece]"></i></p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="dropListOnUser w-[200px] border border-[#363636] rounded-lg border-t-0 float-right bg-[#202020] text-[#cfcece] mr-[20px] hover:cursor-pointer ps-[15px] py-[15px] flex flex-col gap-4 text-[14px]">
+                <p><i class="ri-user-line"></i> Profile</p>
+                <p><i class="ri-equalizer-line"></i> Settings</p>
+                <p><i class="ri-question-answer-line"></i> Messages</p>
+                <p><i class="ri-customer-service-2-line"></i> Support</p>
+                <div class="line w-100 border-t border-t-[#505050] ml-[-15px]"></div>
+                <p><i class="ri-logout-circle-r-line"></i> Log Out</p>
+            </div>
+            <div class="Main bg-[#151515] w-full h-[100vh]"></div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+    jQuery.noConflict();
+     jQuery(document).ready(function($){
+        $(".dropListOnUser").hide();
+        $(".navUserProfile").click(function(){
+            $(".dropListOnUser").fadeToggle(100)
+        })
+    })
+</script>
+</html>
